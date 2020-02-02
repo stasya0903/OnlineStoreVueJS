@@ -1,9 +1,9 @@
 class Product {
     constructor(productObj) {
         this.id = productObj.id;
-        this.title = productObj.title;
+        this.title = productObj.product_name;
         this.price = productObj.price;
-        this.img = productObj.img;
+        this.img = "img/featured1.jpg";
     }
 
     render() {
@@ -25,37 +25,23 @@ class Product {
 }
 
 class Products {
-    constructor(block) {
+    constructor(block, url) {
         this.block = document.getElementById(block);
-        this.data = [];
         this.allproducts = [];
-        this.init();
+        this.__fetchData(url)
+            .then(data => this.data = [...data])
+            .then(() => this.__render())
     }
 
-    init() {
-        this.__fetchData();
-        this.__render();
-    }
-
-    __fetchData() {
-        this.data = [
-            {id: 1, title: "Mango People T-shirt", price: "52", img: "img/featured1.jpg"},
-            {id: 2, title: "Mango People T-shirt", price: "53", img: "img/featured1.jpg"},
-            {id: 3, title: "Mango People T-shirt", price: "54", img: "img/featured1.jpg"},
-            {id: 4, title: "Mango People T-shirt", price: "52", img: "img/featured1.jpg"},
-            {id: 5, title: "Mango People T-shirt", price: "52", img: "img/featured1.jpg"},
-            {id: 6, title: "Mango People T-shirt", price: "52", img: "img/featured1.jpg"},
-            {id: 6, title: "Mango People T-shirt", price: "52", img: "img/featured1.jpg"},
-            {id: 6, title: "Mango People T-shirt", price: "52", img: "img/featured1.jpg"}
-
-        ];
+    __fetchData(url) {
+        return fetch(url).then(respond => respond.json());
     }
 
     __render() {
         this.data.forEach((el) => {
             let product = new Product(el);
             this.allproducts.push(product);
-            this.block.insertAdjacentHTML("afterbegin",product.render());
+            this.block.insertAdjacentHTML("afterbegin", product.render());
 
         })
 
@@ -68,9 +54,9 @@ class Basket {
 
     }
 }
- new Products("product_list");
 
-
+const URL = "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/";
+new Products("product_list", URL + "catalogData.json");
 
 
 
