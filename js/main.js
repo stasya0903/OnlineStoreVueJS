@@ -3,46 +3,24 @@ const API = "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-a
 new Vue({
     el: "#app",
     data: {
-        basketUrl: "/getBasket.json",
-        itemsInBasket: [],
-        show: false
-    },
-    computed: {
-        total() {
-            return this.itemsInBasket.reduce((sum, el) => sum + el.price * el.quantity, 0);
-        },
-        amount() {
-            return this.itemsInBasket.length;
-        }
 
+        counter: 0
     },
+
     methods: {
 
         getJson(url) {
             return fetch(url)
-                .then(data => data.json()
-                    .catch(error => console.log(error))
+                .then(data => data.json())
+                .catch((error) => {
+                        this.$root.$refs.error.handleError(error);
+                    }
                 )
 
         },
 
-        deleteItem(item){
-            console.log(item);
-            let indx = this.itemsInBasket.indexOf(item);
-            this.itemsInBasket.splice(indx, 1);
-        }
 
     },
-
-        mounted() {
-            this.getJson(`${API + "/getBasket.json"}`)
-                .then((data) => {
-                    for(let el of data.contents){
-                        this.itemsInBasket.push(el);
-                    }
-                });
-
-        }
 
 
 });
