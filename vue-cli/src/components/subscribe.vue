@@ -5,15 +5,12 @@
         <img src="img/pic-of-per.png" alt="">
       </div>
       <div class="text_subs">
-        <p class="comment_subsc">“Vestibulum quis porttitor dui! Quisque viverra nunc mi,
-          a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”</p>
+        <p class="comment_subsc">{{comments[selectedCommentId].commentText}}</p>
         <p class="name">
-          Bin Burhan</p>
-        <p class="place">Dhaka, Bd</p>
+          {{comments[selectedCommentId].authorName}}</p>
+        <p class="place">{{comments[selectedCommentId].authorCountry}}</p>
         <div class="options">
-          <div class="option"></div>
-          <div class="option"></div>
-          <div class="option"></div>
+          <div :class="{pink: selectedCommentId+1 === comment.commentId}"  v-for="comment in comments" :key="comment.commentId" @click="selectedCommentId=comment.commentId - 1" class="option"></div>
         </div>
       </div>
 
@@ -25,9 +22,9 @@
         <p class="sup_text">FOR OUR NEWLETTER AND PROMOTION</p>
       </div>
       <div class="form_sub">
-        <form action="#">
-          <input type="text" placeholder="Enter Your Email" class="email_input">
-          <input type="submit" value="Subscribe" class="button_sub btnWhiteEffects"></button>
+        <form @submit.prevent="addSubscribtion">
+          <input type="email" placeholder="Enter Your Email" class="email_input" v-model:value="subscribeEmail">
+          <input  type="submit" value="Subscribe" class="button_sub btnWhiteEffects">
         </form>
 
       </div>
@@ -38,10 +35,53 @@
 
 <script>
     export default {
-        name: "subscribe"
+        name: "subscribe",
+      data(){
+          return{
+            subscribeEmail: "",
+            selectedCommentId: 0,
+            comments: [
+              {
+                commentId:1,
+                commentText:"1 Vestibulum quis porttitor dui! " +
+                  "Quisque viverra nunc mi,a pulvinar purus " +
+                  "condimentum a. Aliquam condimentum mattis neque sed pretium",
+                authorName: "Bin Burhan",
+                authorCountry: "Dhaka, Bd"
+              },
+              {
+                commentId:2,
+                commentText:"2 Vestibulum quis porttitor dui! " +
+                  "Quisque viverra nunc mi,a pulvinar purus " +
+                  "condimentum a. Aliquam condimentum mattis neque sed pretium",
+                authorName: "Bin Burhan",
+                authorCountry: "Dhaka, Bd"
+              },
+              {
+                commentId:3,
+                commentText:"3 Vestibulum quis porttitor dui! " +
+                  "Quisque viverra nunc mi,a pulvinar purus " +
+                  "condimentum a. Aliquam condimentum mattis neque sed pretium",
+                authorName: "Bin Burhan",
+                authorCountry: "Dhaka, Bd"
+              }
+
+            ]
+          }
+
+      },
+      methods: {
+        addSubscribtion(){
+
+          alert(`Ваш email  ${this.subscribeEmail} был подписан на обновления`)
+        }
+      }
+
     }
 </script>
 
 <style scoped>
-
+.pink{
+  background-color: #f16d7f;
+}
 </style>

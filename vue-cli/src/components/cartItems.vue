@@ -1,23 +1,32 @@
 <template>
-  <div >
-    <product
-      v-for="item of allProducts"
+  <table class="container table_choosen">
+    <tr class="table_colums colums_heading ">
+      <td class="rows row_product  row_productfirst"> Product Details</td>
+      <td class="rows row_prise row_productfirst"> unite Price</td>
+      <td class="rows row_quantity row_productfirst"> Quantity</td>
+      <td class="rows row_shipping row_productfirst"> shipping</td>
+      <td class="rows row_subtotal row_productfirst"> Subtotal</td>
+      <td class="rows row_action row_productfirst"> ACTION</td>
+    </tr>
+    <cartItem
+      v-for="item of allItemsInBasket"
       :item="item"
       :key="item.product_id"
-      @addProduct="addProduct">
-    </product>
-  </div>
+      @deleteItem="deleteItem"
+    @changeQuantity="changeQuantity">
+    </cartItem>
+  </table>
+
 </template>
 
 <script>
   import {mapActions, mapGetters, mapMutations} from "vuex";
-  import product from "./product";
+  import cartItem from "./cartItem";
 
     export default {
-      name: "products",
-      props: ['classForContainer'],
+      name: "cartItems",
       components: {
-        product
+       cartItem
 
       },
       data() {
@@ -26,14 +35,14 @@
 
         }
       },
-      computed: mapGetters(['allProducts', 'featuredProducts', 'allItemsInBasket', 'getItemInBasket']),
+      computed: mapGetters(['allItemsInBasket']),
       methods: {
-        ...mapActions(["getJson", "putJson", 'postJson', 'deleteJson', 'addProduct']),
+        ...mapActions([ 'addProduct',"deleteItem", "changeQuantity"]),
 
       },
 
       async mounted() {
-        this.getJson({api:this.api, action:"getAllProducts"});
+        this.getJson({api:this.api, action:'getItemsInBasket'});
 
       }
     }
