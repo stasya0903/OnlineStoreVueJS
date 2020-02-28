@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Jacket",
+        "action": "add",
+        "time": "Saturday, February 22nd 2020, 6:22:16 pm"
+    },
+    {
+        "name": "Jacket",
+        "action": "deleteItem",
+        "time": "Saturday, February 22nd 2020, 6:22:21 pm"
+    },
+    {
+        "name": "Jacket",
+        "action": "deleteItem",
+        "time": "Sunday, February 23rd 2020, 4:50:15 pm"
+    }
+]
