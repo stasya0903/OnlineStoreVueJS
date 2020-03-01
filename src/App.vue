@@ -5,7 +5,7 @@
       <div class="container header__flex">
         <div class="header__left">
           <router-link class="logo" to="/">
-            <img src="/img/logo.png" alt="logo" class="brand_img">
+            <img :src="require(`@/assets/logo.png`)" alt="logo" class="brand_img">
             BRAN <span class="pink bold"> D</span></router-link>
           <form class="header__form" action="#">
             <div class="browse">Browse
@@ -304,7 +304,7 @@
       <div class="footer_big">
         <div class="container footer_big__container">
           <div class="brand_info">
-            <router-link class="logo logo_footer" to="/"><img src="img/logo.png" alt="logo"
+            <router-link class="logo logo_footer" to="/"><img :src="require(`@/assets/logo.png`)" alt="logo"
                                                               class="brand_img">BRAN
               <span
                 class="pink bold">D</span></router-link>

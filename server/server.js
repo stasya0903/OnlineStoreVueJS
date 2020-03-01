@@ -6,12 +6,6 @@ const path = require('path');
 const cors = require('cors');
 
 
-/*
-APP.use(require('connect-history-api-fallback')())
-// view engine setup
-APP.set('views', path.join(__dirname, 'views'));
-*/
-
 APP.use(cors());
 APP.use(express.json());
 APP.use('/api/cart', CART);
@@ -21,7 +15,7 @@ APP.listen(PORT, () => {
 });
 
 APP.get('/api/products', (req, res)=>{
-    FS.readFile('src/server/db/products.json', 'utf8', ((err, data) => {
+    FS.readFile('./server/db/products.json', 'utf8', ((err, data) => {
         if(err){
             res.send({result:0, text: err})
         }else {

@@ -2,7 +2,7 @@
   <div class="subscibe">
     <div class="subscribe_left">
       <div class="pic">
-        <img src="img/pic-of-per.png" alt="">
+        <img :src="require(`@/assets/pic-of-per.png`)" alt="">
       </div>
       <div class="text_subs">
         <p class="comment_subsc">{{comments[selectedCommentId].commentText}}</p>

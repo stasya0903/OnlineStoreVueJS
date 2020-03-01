@@ -185,7 +185,7 @@
     <div class="special_offers special_offers_black">
       <div class="hotoffers_black">
         <div class="offer_black">
-          <div class="ofer_image_black"><img src="img/offer1.svg" alt="">
+          <div class="ofer_image_black"><img :src="require(`@/assets/offer1.svg`)" alt="">
           </div>
           <div class="text text_black">
             <p class="offer_head_black">Free Delivery</p>
@@ -195,7 +195,7 @@
           </div>
         </div>
         <div class="offer_black">
-          <div class="ofer_image_black"><img src="img/offer2.svg" alt=""></div>
+          <div class="ofer_image_black"><img :src="require(`@/assets/offer2.svg`)" alt=""></div>
           <div class="text text_black">
             <p class="offer_head_black ">Sales & discounts</p>
             <p class="offer_promo black_offer">Worldwide delivery on all. Authorit tively morph
@@ -204,7 +204,7 @@
           </div>
         </div>
         <div class="offer_black">
-          <div class="ofer_image_black"><img src="img/offer3.png" alt=""></div>
+          <div class="ofer_image_black"><img :src="require(`@/assets/offer3.png`)" alt=""></div>
           <div class="text text_black">
             <p class="offer_head_black ">Quality assurance</p>
             <p class="offer_promo black_offer">Worldwide delivery on all. Authorit tively morph
