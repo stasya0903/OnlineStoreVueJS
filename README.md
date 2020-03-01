@@ -8,9 +8,9 @@ Used Router Vue to build SPA.
 Simple API build with Node.js(Express). DataBase simulated by Json files
 
 ## to run the server
-
+```
 node server/server.js
-
+```
 ## Project setup
 ```
 npm install
