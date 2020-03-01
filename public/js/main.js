@@ -1,6 +1,30 @@
 const API = "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses";
 
+new Vue({
+    el: "#app",
+    data: {
 
+        counter: 0
+    },
+
+    methods: {
+
+        getJson(url) {
+            return fetch(url)
+                .then(data => data.json())
+                .catch((error) => {
+                        this.$root.$refs.error.handleError(error);
+                    }
+                )
+
+        },
+
+
+    },
+
+
+});
+/*
 class List {
     constructor(block, url) {
         this.data = [];
@@ -135,20 +159,7 @@ class Basket extends List {
             this.amount = this.calcSum();
         });
 
-        basket += `<div class="total_cart_drop">
-                    <p>TOTAL</p>
-                    <p id="total">$${this.amount}</p>
-                </div>
-                <div class="cart_drop_actions">
-                    <a href="checkout.html">
-                        <div class="cart_drop_btn">CHECKOUT</div>
-                    </a>
-
-                    <a href="shoppingCard.html">
-                        <div class="cart_drop_btn">GO TO CART</div>
-                    </a>
-
-                </div>`;
+        basket += `;
         this.block.innerHTML = basket;
         this.updateCount();
 
@@ -245,24 +256,7 @@ class BasketItem extends Item {
     }
 
     render() {
-        return `<div class="cart-item" data-id="${this.id_product}">
-                    <img class="cart-item__img" src="${this.img}" alt="">
-                    <div class="cart-item__info">
-                        <p class="item_info__drop">${this.product_name}</p>
-                        <p class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </p>
-
-                        <p class="price__prop"> ${this.quantity} X $${this.price} </p>
-                    </div>
-                    <div class="delete_btn__drop">
-                        <i data-id="${this.id_product}" id="deleteBtn" class="fas fa-times-circle"></i>
-                    </div>
-                </div>`
+        return ``
     }
 
 
@@ -270,6 +264,7 @@ class BasketItem extends Item {
 
 let basket = new Basket;
 let catalog = new Products(basket);
+*/
 
 
 

@@ -2266,4 +2266,29 @@ button:focus {
   color: #6f6e6e;
 }
 
+.errorBody{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.4);
+  z-index:5;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.errorMsg{
+  width: 40vw;
+ padding-bottom: 1em;
+  background-color: white;
+  text-align: center;
+}
+
+.errorBtn{
+ padding-left: 38vw;
+  padding-top: 1em;
+}
+
+
+
 /*# sourceMappingURL=style.css.map */
