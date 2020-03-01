@@ -5,7 +5,7 @@
     <main>
       <div class="product-imgBig">
         <div class="navArrow"><i class="fas fa-chevron-left"></i></div>
-        <img class="product-imgBig__img" src="/img/product-bigImg.jpg" alt="">
+        <img class="product-imgBig__img" :src="require(`@/assets/product-bigImg.jpg`)" alt="">
         <div class="navArrow"><i class="fas fa-chevron-right"></i></div>
       </div>
       <article class="container product-infoBig">
@@ -62,7 +62,7 @@
             </div>
           </div>
           <div @click="addProduct({item, quantity: +newQuantity})"class="addToCart btnWhiteEffects">
-            <img class="productBig__cart" src="img/cartPink.svg" alt="">
+            <img class="productBig__cart" :src="require(`@/assets/cartPink.svg`)" alt="">
             <span >Add to Cart</span>
           </div>
         </div>

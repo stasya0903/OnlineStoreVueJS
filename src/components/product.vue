@@ -1,10 +1,10 @@
 <template>
   <article>
     <div class="featured_content">
-      <router-link :to="{name: 'singleProductPage', params: {id: item.id_product}}"><img class="product_image" :src="img"
+      <router-link :to="{name: 'singleProductPage', params: {id: item.id_product}}"><img class="product_image" :src="require(`@/assets/featured1.jpg`)"
                                      alt="productphoto"></router-link>
       <div class="product_text">
-        <a href="singlePage.html" class="product_link">{{item.product_name}}</a>
+        <router-link :to="{name: 'singleProductPage', params: {id: item.id_product}}" class="product_link">{{item.product_name}}</router-link>
         <p class="price">$ {{item.price}}</p>
       </div>
       <button @click="$emit('addProduct', item)" class="product_add " id="product_add">

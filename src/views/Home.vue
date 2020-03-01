@@ -72,7 +72,7 @@
       </div>
       <div class="hotoffers">
         <div class="offer">
-          <div class="ofer_image"><img src="img/offer1.svg" alt="">
+          <div class="ofer_image"><img :src="require(`@/assets/offer1.svg`)" alt="">
           </div>
           <div class="text">
             <p class="offer_head">Free Delivery</p>
@@ -81,7 +81,7 @@
           </div>
         </div>
         <div class="offer">
-          <div class="ofer_image"><img src="img/offer2.svg" alt=""></div>
+          <div class="ofer_image"><img :src="require(`@/assets/offer2.svg`)" alt=""></div>
           <div class="text">
             <p class="offer_head">Sales & discounts</p>
             <p class="offer_promo">Worldwide delivery on all. Authorit tively morph next-generation innov tion
@@ -89,7 +89,7 @@
           </div>
         </div>
         <div class="offer last_offer">
-          <div class="ofer_image"><img src="img/offer3.png" alt=""></div>
+          <div class="ofer_image"><img :src="require(`@/assets/offer3.png`)" alt=""></div>
           <div class="text">
             <p class="offer_head">Quality assurance</p>
             <p class="offer_promo">Worldwide delivery on all. Authorit tively morph next-generation innov tion

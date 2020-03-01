@@ -4,10 +4,10 @@
     "contents": [
         {
             "quantity": 1,
-            "id_product": 7,
-            "product_name": "skirt",
+            "id_product": 3,
+            "product_name": "Dress",
             "price": 2600,
-            "material": "leather",
+            "material": "cotton",
             "designer": "Prada"
         }
     ]

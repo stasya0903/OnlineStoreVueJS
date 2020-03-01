@@ -2,7 +2,7 @@
   <tr class="table_colums">
     <td class="table_choosen rows row_product">
 
-      <div class="row_img"><img src="img/img_row1.png" alt=""></div>
+      <div class="row_img"><img :src="require(`@/assets/img_row1.png`)" alt=""></div>
       <div class="row_text">
         <a href="#"><p class="row_text product_name">Mango People T-shirt</p></a>
 

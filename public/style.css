@@ -64,7 +64,7 @@ body {
   margin-top: 9px;
   margin-right: 30px;
   position: relative;
-  background: url(img/cart.svg);
+  background: url(../src/assets/cart.svg);
   border: none;
 }
 
@@ -172,7 +172,7 @@ body {
 }
 
 .promo-content {
-  background-image: url(img/brand_back.jpg);
+  background-image: url(../src/assets/brand_back.jpg);
   height: 100%;
   background-position: 0 -51px;
 }
@@ -223,7 +223,7 @@ body {
 .formen {
   height: 542px;
   width: 560px;
-  background-image: url(img/formen.jpg);
+  background-image: url(../src/assets/formen.jpg);
   background-position: center;
   background-size: cover;
   margin-bottom: 20px;
@@ -232,7 +232,7 @@ body {
 .kids {
   height: 542px;
   width: 560px;
-  background-image: url(img/forkids.jpg);
+  background-image: url(../src/assets/forkids.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -241,7 +241,7 @@ body {
   width: 560px;
   height: 261px;
   background-color: #dadad2;
-  background-image: url(img/acces.png);
+  background-image: url(../src/assets/acces.png);
   background-position: 173px;
   background-repeat: no-repeat;
   background-size: inherit;
@@ -250,7 +250,7 @@ body {
 .women {
   height: 261px;
   width: 560px;
-  background-image: url(img/forwomen.jpg);
+  background-image: url(../src/assets/forwomen.jpg);
   background-position: center;
   background-size: cover;
   margin-bottom: 20px;
@@ -503,7 +503,7 @@ body {
 .discount_offer {
   width: 767px;
   height: 529px;
-  background-image: url(img/30peroffer.jpg);
+  background-image: url(../src/assets/30peroffer.jpg);
 }
 
 .hotoffers {
@@ -689,7 +689,7 @@ body {
 
 .subscibe {
   display: flex;
-  background-image: url(img/subscibe.jpg);
+  background-image: url(../src/assets/subscibe.jpg);
   height: 438px;
   margin-top: 97px;
   width: 100%;
@@ -836,7 +836,7 @@ body {
   padding-top: 109px;
 }
 
-.brand_img {
+.brand_./src/assets {
   display: block;
   padding-right: 13px;
 }
@@ -1078,7 +1078,7 @@ body {
   -webkit-appearance: none;
   width: 14px;
   height: 14px;
-  background: url("img/pink_slider.svg");
+  background: url("../src/assets/pink_slider.svg");
   cursor: pointer;
   margin-top: -5px;
 }
@@ -1417,7 +1417,7 @@ body {
   display: flex;
 }
 
-.table_choosen .row_product .row_img {
+.table_choosen .row_product .row_./src/assets {
   padding: 21px;
   padding-left: 0px;
 }
@@ -1645,7 +1645,7 @@ body {
   padding-bottom: 16px;
   margin-bottom: 16px;
 }
-.cart-item__img {
+.cart-item__./src/assets {
   width: 72px;
   height: 85px;
 }
@@ -1905,7 +1905,7 @@ body {
   margin: 0;
 }
 
-.product-imgBig {
+.product-./src/assetsBig {
   border-top: 1px solid #eaeaea;
   background-color: #f7f7f7;
   width: 100%;
@@ -2166,10 +2166,10 @@ body {
   position: absolute;
   left: 0;
   bottom: 3px;
-  background: url(img/radio-1.png) 0 0 no-repeat;
+  background: url(../src/assets/radio-1.png) 0 0 no-repeat;
 }
 .checkout__radio input[type=radio]:checked + label:before {
-  background: url(img/radio_2.png) 0 0 no-repeat;
+  background: url(../src/assets/radio_2.png) 0 0 no-repeat;
 }
 .checkout__input {
   width: 390px;

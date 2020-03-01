@@ -4,7 +4,7 @@
          id="drop__cart">
       <div class="cart-item" v-for="item of allItemsInBasket"
       :key="item.id_product">
-        <img class="cart-item__img" alt=""> <!--:src="item.img"-->
+        <img :src="require(`@/assets/cart__item1.jpg`)" class="cart-item__img" alt="">
         <div class="cart-item__info">
           <p class="item_info__drop">{{item.product_name}}</p>
           <p class="rating">
