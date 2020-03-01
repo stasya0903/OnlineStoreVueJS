@@ -2,18 +2,26 @@ const express = require('express');
 const FS = require('fs');
 const APP = express();
 const CART = require('./CartRouter');
+const path = require('path');
+const cors = require('cors');
 
 
-//APP.use(express.json());
+/*
+APP.use(require('connect-history-api-fallback')())
+// view engine setup
+APP.set('views', path.join(__dirname, 'views'));
+*/
+
+APP.use(cors());
+APP.use(express.json());
 APP.use('/api/cart', CART);
-
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3030;
 APP.listen(PORT, () => {
     console.log( `server is running on ${PORT}`);
 });
 
 APP.get('/api/products', (req, res)=>{
-    FS.readFile('server/db/products.json', 'utf8', ((err, data) => {
+    FS.readFile('src/server/db/products.json', 'utf8', ((err, data) => {
         if(err){
             res.send({result:0, text: err})
         }else {

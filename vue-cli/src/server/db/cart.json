@@ -3,11 +3,11 @@
     "countGoods": 0,
     "contents": [
         {
-            "id_product": 1,
-            "product_name": "T-Shirt",
-            "price": 1600,
             "quantity": 1,
-            "material": "cotton",
+            "id_product": 7,
+            "product_name": "skirt",
+            "price": 2600,
+            "material": "leather",
             "designer": "Prada"
         }
     ]
