@@ -11,7 +11,7 @@ import store from './store';
 import CartDrop from "./components/CartDrop";
 
 
-library.add(fab,faUserSecret,faFontAwesome,faSearch);
+library.add(fab,faUserSecret,faFontAwesome,faSearch,fas);
 
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);

@@ -2288,7 +2288,7 @@ button:focus {
  padding-left: 38vw;
   padding-top: 1em;
 }
-
-
-
-/*# sourceMappingURL=style.css.map */
+.changeQty{
+  display:flex;
+  justify-content: space-around;
+}

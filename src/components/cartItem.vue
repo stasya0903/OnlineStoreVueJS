@@ -11,56 +11,31 @@
       </div>
     </td>
     <td class="table_choosen rows row_prise"> {{item.price}}</td>
-    <td class="table_choosen rows row_quantity"><p class="pink" v-show="error">{{error}}</p><input type="number"  min="1" max="100" v-model="newQuantity"  @input="change/*$emit('changeQuantity', {item, newQuantity})*/"  class="qty" ></td>
-    <td class="table_choosen rows row_shipping"> free</td>
-    <td class="table_choosen rows row_subtotal">{{item.price * newQuantity}}</td>
+    <td class="table_choosen rows row_quantity">{{item.quantity}}</td>
+    <td class="table_choosen rows row_shipping">  free</td>
+    <td class="table_choosen rows row_subtotal">{{item.price * item.quantity}}</td>
     <td class="table_choosen rows row_action">
-      <font-awesome-icon @click="$emit('deleteItem', item)" id="deleteBtn" class="fas fa-times-circle btnPressEffect" :icon="['fas', 'times-circle']"/>
-      </td>
+      <div class="changeQty">
+        <font-awesome-icon
+                @click="$emit('addProduct', item)"
+                id="MoreBtn" class="fas fa-times-circle btnPressEffect"
+                :icon="['fas', 'plus-circle']"/>
+        <font-awesome-icon
+                @click="$emit('deleteItem', item)"
+                id="LessBtn" class="fas fa-times-circle btnPressEffect"
+                :icon="['fas', 'minus-circle']"/>
+      </div>
+    </td>
   </tr>
 </template>
 
 <script>
   export default {
     name: "cartItem",
-    data() {
-      return {
-          error:"",
-          oldQty: this.item.quantity,
-      }
-    },
     props: {
       item: Object
 
     },
-
-    computed:{
-      newQuantity:{
-        get(){
-
-            return +this.item.quantity
-        },
-        set(val){
-         if ((val === "")){
-            this.error = ""
-          }
-          else if(isNaN(val) || val <= 0 || val > 100){
-            this.error = 'input correct amount of the items from 1 to 100'
-          } else {
-            this.error = '';
-            this.$emit('changeQuantity', {item: this.item, val});
-          }
-
-        }
-
-      }
-    },
-    mounted: {
-      setQty(){
-        this.oldQty = this.item.quantity
-      }
-    }
-
   }
 </script>
 

@@ -13,7 +13,7 @@
       :item="item"
       :key="item.product_id"
       @deleteItem="deleteItem"
-    @changeQuantity="changeQuantity">
+    @addProduct="addProduct({item, quantity:1})">
     </cartItem>
   </table>
 
@@ -28,12 +28,6 @@
       components: {
        cartItem
 
-      },
-      data() {
-        return {
-          api: `http://localhost:3030/api/products`,
-
-        }
       },
       computed: mapGetters(['allItemsInBasket']),
       methods: {
