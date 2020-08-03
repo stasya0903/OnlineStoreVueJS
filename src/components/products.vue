@@ -22,7 +22,7 @@
       },
       data() {
         return {
-          api: `http://localhost:3030/api/products`,
+          api: `https://onlinestoreonvue.herokuapp.com/api/`,
 
         }
       },
