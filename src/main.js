@@ -2,8 +2,6 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import {fas, faUserSecret, faSearch} from '@fortawesome/free-solid-svg-icons';
 import { faFontAwesome, fab } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-/*import { faSearch } from '@fortawesome/free-solid-svg-icons';*/
-/*import { fab } from '@fortawesome/free-brands-svg-icons';*/
 import './plugins/fontawesome';
 import Vue from 'vue';
 import '../public/style.css';
@@ -26,3 +24,5 @@ new Vue({
   CartDrop,
   render: (h) => h(App),
 }).$mount('#app');
+
+
