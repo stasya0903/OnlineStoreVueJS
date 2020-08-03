@@ -57,7 +57,6 @@
     name: "CartDrop",
     data() {
       return {
-        api: `https://onlinestoreonvue.herokuapp.com/api/cart`,
         show: false,
       }
     },
@@ -68,7 +67,7 @@
     computed: mapGetters(['allItemsInBasket', 'amount', 'total']),
 
     async mounted() {
-     this.getJson({api:this.api, action:'getItemsInBasket'});
+     this.getJson({method:'cart', action:'getItemsInBasket'});
 
     }
   }

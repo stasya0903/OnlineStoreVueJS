@@ -50,7 +50,7 @@ export default new Vuex.Store({
 
         },
         async deleteJson(ctx, args) {
-            const result = await fetch(`${ctx.state.api}${args.method}`, {
+            const result = await fetch(args.api, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json'
@@ -101,17 +101,13 @@ export default new Vuex.Store({
 
         },
         deleteItem(ctx, item) {
-            if (item.quantity <= 1) {
-                ctx.dispatch('deleteJson', {api: `${ctx.state.api}cart`, item: item});
-            } else {
-
+         (item.quantity <= 1) ?
+                ctx.dispatch('deleteJson', {api: `${ctx.state.api}cart`, item: item}) :
                 ctx.dispatch('putJson', {id_product: item.id_product, quantity: -1})
 
-            }
         },
         changeQuantity(ctx, args) {
             let quantity = args.val - args.item.quantity;
-
             ctx.dispatch('putJson', {id_product: args.item.id_product, quantity})
         },
         clearCart(ctx) {
@@ -135,7 +131,6 @@ export default new Vuex.Store({
             return state.products.find(el => el.id_product === id);
         },
         allProducts(state) {
-
             return state.products;
         },
         featuredProducts(state) {

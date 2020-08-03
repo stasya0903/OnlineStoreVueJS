@@ -27,17 +27,13 @@
       return {
           error:"",
           oldQty: this.item.quantity,
-
       }
     },
     props: {
       item: Object
 
     },
-    methods: {
 
-
-    },
     computed:{
       newQuantity:{
         get(){

@@ -18,17 +18,14 @@
       props: ['classForContainer'],
       components: {
         product
-
       },
       computed: mapGetters(['allProducts', 'featuredProducts', 'allItemsInBasket', 'getItemInBasket',]),
       methods: {
         ...mapActions(["getAllProducts", 'getJson', 'addProduct']),
 
       },
-
       async mounted() {
         this.getJson({method:"products", action:"getAllProducts"});
-
       }
     }
 
