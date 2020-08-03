@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const PORT = process.env.PORT || 3030;
 
-//APP.use(cors());
+APP.use(cors());
 APP.use(express.json());
 APP.use('/api/cart', CART);
 APP.use(express.static('dist'));
@@ -40,9 +40,4 @@ APP.get('/api/products', (req, res)=>{
     }))
 
 });
-// get post put delete
-// (req, res)
-//res .send(текст или что то )
-//req .
-//  /: param  => req.params.id
-// ? = req.query
+

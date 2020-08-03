@@ -5,7 +5,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    api: `http://localhost:3030/api/`,
+    api: `https://onlinestoreonvue.herokuapp.com/api/`,
     products: [],
     itemsInBasket: [],
 
