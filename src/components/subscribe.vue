@@ -72,7 +72,6 @@
       },
       methods: {
         addSubscribtion(){
-
           alert(`Ваш email  ${this.subscribeEmail} был подписан на обновления`)
         }
       }

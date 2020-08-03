@@ -57,7 +57,7 @@
     name: "CartDrop",
     data() {
       return {
-        api: `http://localhost:3030/api/cart`,
+        api: `https://onlinestoreonvue.herokuapp.com/api/cart`,
         show: false,
       }
     },
