@@ -1,14 +1,5 @@
 {
     "amount": 0,
     "countGoods": 0,
-    "contents": [
-        {
-            "quantity": 1,
-            "id_product": 3,
-            "product_name": "Dress",
-            "price": 2600,
-            "material": "cotton",
-            "designer": "Prada"
-        }
-    ]
+    "contents": []
 }
