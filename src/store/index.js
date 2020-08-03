@@ -36,7 +36,7 @@ export default new Vuex.Store({
     },
     actions: {
         async getJson(ctx, args) {
-            const result = await fetch(args.api);
+            const result = await fetch(`${ctx.state.api}${args.method}`);
             const data = await result.json();
             switch (args.action) {
                 case "getItemsInBasket":
@@ -50,7 +50,7 @@ export default new Vuex.Store({
 
         },
         async deleteJson(ctx, args) {
-            const result = await fetch(args.api, {
+            const result = await fetch(`${ctx.state.api}${args.method}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json'

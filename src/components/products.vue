@@ -20,20 +20,14 @@
         product
 
       },
-      data() {
-        return {
-          api: `https://onlinestoreonvue.herokuapp.com/api/`,
-
-        }
-      },
-      computed: mapGetters(['allProducts', 'featuredProducts', 'allItemsInBasket', 'getItemInBasket']),
+      computed: mapGetters(['allProducts', 'featuredProducts', 'allItemsInBasket', 'getItemInBasket',]),
       methods: {
         ...mapActions(["getAllProducts", 'getJson', 'addProduct']),
 
       },
 
       async mounted() {
-        this.getJson({api:this.api, action:"getAllProducts"});
+        this.getJson({method:"products", action:"getAllProducts"});
 
       }
     }
