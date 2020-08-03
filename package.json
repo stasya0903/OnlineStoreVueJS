@@ -1,15 +1,7 @@
 {
-  "name": "OnlineStoreVueJS",
+  "name": "onlinestore",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "start": "node server/server.js",
-    "serve": "vue-cli-service serve && nodemon server/server.js",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "express": "vue-cli-service express:watch",
-    "express:run": "vue-cli-service express:run"
-  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
@@ -41,6 +33,14 @@
     "vue-cli-plugin-express": "^1.0.2",
     "vue-cli-plugin-fontawesome": "^0.2.0",
     "vue-template-compiler": "^2.6.11"
+  },
+  "scripts": {
+    "start": "node server/server.js",
+    "serve": "vue-cli-service serve && nodemon server/server.js",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "express": "vue-cli-service express:watch",
+    "express:run": "vue-cli-service express:run"
   },
   "nodemonConfig": {
     "ignore": [
