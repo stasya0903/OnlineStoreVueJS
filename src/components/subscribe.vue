@@ -72,6 +72,7 @@
       },
       methods: {
         addSubscribtion(){
+          this.subscribeEmail = "";
           alert(`Ваш email  ${this.subscribeEmail} был подписан на обновления`)
         }
       }

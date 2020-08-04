@@ -20,7 +20,7 @@
 </template>
 
 <script>
-  import {mapActions, mapGetters, mapMutations} from "vuex";
+  import {mapActions, mapGetters} from "vuex";
   import cartItem from "./cartItem";
 
     export default {
